@@ -23,7 +23,7 @@ func versionFromTool(tool string) string {
 		return ""
 	}
 
-	return parsed.TerraformVersion
+	return parsed.TerraformVersion + "?"
 }
 
 func getVersion(version []string, tool string) string {

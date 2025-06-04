@@ -58,7 +58,12 @@ func TestSniff_getVersion(t *testing.T) {
 		{
 			version:  nil,
 			tool:     "tofu",
-			expected: `^[0-9]+\.[0-9]+\.[0-9]+$`,
+			expected: `^[0-9]+\.[0-9]+\.[0-9]+\?$`,
+		},
+		{
+			version:  []string{"1.9.1"},
+			tool:     "tofu",
+			expected: `^1.9.1$`,
 		},
 		{
 			version:  nil,
